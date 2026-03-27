@@ -1,24 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Justyna Nowak-Szrajnert | Software Engineering Professional</title>
-</head>
+    <style>
+    /* Style dla ekranu */
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+    .contact-info { margin-bottom: 20px; }
+
+    /* KLASA DLA OBRAZKA - działa na ekranie */
+    .profile-img { 
+        float: right; 
+        width: 150px; /* szerokość na ekranie */
+        border-radius: 15px;
+        margin-left: 20px; /* odstęp od tekstu z lewej */
+        margin-bottom: 20px; /* odstęp od tekstu z dołu */
+    }
+
+    /* MAGIA DLA PDF */
+    @media print {
+        @page { margin: 1cm; }
+        body { margin: 0; padding: 0; }
+        nav, footer, .no-print { display: none !important; }
+        a { text-decoration: none; color: black !important; }
+        
+        .profile-img { 
+            width: 120px !important; 
+            margin-top: 0; /* resetujemy przesunięcia */
+            margin-left: 30px !important;
+        }
+        .page-break { page-break-before: always; }
+    }
+</style>
+    </head>
 
 <body>
-    <header>
-        <h1>JUSTYNA NOWAK-SZRAJNERT</h1> 
-        <p><strong>Software Engineering Professional | Webcon BPS Architect | Aspiring Web Developer</strong></p> 
+   <header>
+        <img src="./assets/images/resume.jpeg" alt="Profile Photo" class="profile-img">
 
-        <nav>
-            <a href="./public/contact.html">Contact Me</a> | 
-            <a href="https://github.com/JusNow1608" target="_blank">GitHub</a> | 
-            <a href="https://www.linkedin.com/in/justyna-nowak-szrajnert-a5168713b/" target="_blank">LinkedIn</a> | 
-            <a href="https://pl.spoj.com/status/dastin_1608/" target="_blank">SPOJ Profile</a>
-        </nav>
-        <br>
-        <img src="./assets/images/resume.jpeg" alt="Justyna Nowak-Szrajnert profile photo" width="200">
+        <h1>JUSTYNA NOWAK-SZRAJNERT</h1>
+        <p><strong>Software Engineering Professional | Webcon BPS Architect | Aspiring Web Developer</strong></p>
+        
+        <div class="contact-info">
+            <p>
+                📍 Łódź, Poland | 📞 +48 518 740 960 | ✉️ <a href="mailto:justyna.nowak.programista@gmail.com">justyna.nowak.programista@gmail.com</a>
+            </p>
+            <p>
+                <a href="https://linkedin.com/in/justyna-nowak-szrajnert-a5168713b/" target="_blank">LinkedIn</a> | 
+                <a href="https://github.com/JusNow1608" target="_blank">GitHub</a> | 
+                <a href="https://pl.spoj.com/status/dastin_1608/" target="_blank">SPOJ Profile</a> |
+                <span class="no-print">📄 <strong><a href="./assets/docs/Justyna_Nowak_Szrajnert_CV.pdf" download>Download PDF</a></strong></span>
+            </p>
+        </div>
+        <div style="clear: both;"></div>
     </header>
     
     <hr>
@@ -135,14 +171,14 @@
         </section>
         <hr>
 
-        <section>
-            <nav>
-                <h3>
-                    <a href="./public/hobbies.html">View My Passions</a> | 
-                    <a href="./public/contact.html">Contact Details</a>
-                </h3>
-            </nav>
-        </section>
+        <section class="no-print"> <nav>
+        <h3>
+            <a href="./public/hobbies.html">View My Passions</a> | 
+            <a href="./public/contact.html">Contact Details</a>
+        </h3>
+    </nav>
+</section>
+
     </main>
 
     <footer>
