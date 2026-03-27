@@ -1,0 +1,12 @@
+# Systemowe pliki tymczasowe
+.DS_Store
+Thumbs.db
+
+# Pliki konfiguracyjne edytorów (opcjonalnie)
+.vscode/
+.idea/
+
+# Twoje kopie zapasowe lub notatki
+*.log
+*.tmp
+notes.txt
